@@ -31,7 +31,6 @@ setup(
         "soundfile",
         "numpy",
         "jsonargparse[signatures]",
-        "fairseq",
         "torchcrepe",
         "librosa",
         "pesq",
