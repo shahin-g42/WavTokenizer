@@ -18,6 +18,7 @@ setup(
     install_requires=[
         "torch",
         "torchaudio",
+        "hydra-core",
         "scipy",
         "einops",
         "pyyaml",
