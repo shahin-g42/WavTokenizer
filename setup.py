@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+import os
 
 setup(
     name="wavtokenizer",
@@ -8,31 +9,40 @@ setup(
     long_description_content_type="text/markdown",
     author="Jisheng Peng and WavTokenizer Contributors",
     author_email="your.email@example.com",  # Replace with your email or leave as is
-    url="https://github.com/jishengpeng/WavTokenizer",  # Update to your forked repo URL if needed
+    url="https://github.com/your-username/WavTokenizer",  # Update to your forked repo URL
     packages=find_packages(),  # Automatically find packages in encoder/, decoder/, etc.
     include_package_data=True,  # Include non-code files like configs/*.yaml
     package_data={
         "wavtokenizer": ["configs/*.yaml"],  # Include configuration files
     },
     install_requires=[
-        "torch>=1.13.0",  # Core PyTorch dependency
-        "torchaudio>=0.13.0",  # Audio processing
-        "numpy>=1.21.0",  # Numerical operations
-        "librosa>=0.9.0",  # Audio analysis
-        "pytorch-lightning>=2.0.0",  # Training framework
-        "soundfile>=0.12.0",  # Audio I/O
-        "tqdm>=4.64.0",  # Progress bars
-        "pyyaml>=6.0",  # YAML config parsing
-        # Add other dependencies from requirements.txt if needed
+        "torch",
+        "torchaudio",
+        "scipy",
+        "einops",
+        "pyyaml",
+        "huggingface_hub",
+        "encodec",
+        "matplotlib",
+        "transformers",
+        "pytorch-lightning",
+        "tensorboardX",
+        "soundfile",
+        "numpy",
+        "jsonargparse[signatures]",
+        "fairseq",
+        "torchcrepe",
+        "librosa",
+        "pesq",
     ],
     extras_require={
         "dev": [
-            "pytest>=7.0.0",  # For testing
-            "black>=22.0.0",  # Code formatting
-            "flake8>=5.0.0",  # Linting
+            "pytest",
+            "black",
+            "flake8",
         ],
     },
-    python_requires=">=3.8",  # Minimum Python version
+    python_requires=">=3.8",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
